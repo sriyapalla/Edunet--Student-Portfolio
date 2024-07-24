@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Student Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I am Sriya, pursuing Bachelor’s degree in Computer Science. An
+            innovative and enthusiastic engineer with a passion for critical
+            thinking and problem solving.
+            </p>
+    </section>
+    
+    <section id="education" class="section">
+        <h2>Education</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Degree</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bachelor of Technology (CSE)</td>
+                    <td>SRM University, AP</td>
+                    <td>2022-2026</td>
+                    <td>Current CGPA - 9.04</td>
+                </tr>
+                <tr>
+                    <td>Intermediate (MPC)</td>
+                    <td>Narayana Junior College</td>
+                    <td>2020-2022</td>
+                    <td>Percentage - 96.2</td>
+                </tr>
+                <tr>
+                    <td>High School (ICSE)</td>
+                    <td>St. Joseph's School</td>
+                    <td>2020</td>
+                    <td>Percentage - 92.5</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>EVENT MANAGEMENT SYSTEM</h3>
+            <p>This project is designed to streamline event planning 
+                and execution processes. Leveraging Data Base Management 
+                System, this project offers a comprehensive solution 
+                for coordinating scheduling, resource allocation and communication.
+                </p>
+        </div>
+        <div class="project">
+            <h3>HOTEL MANAGEMENT SYSTEM</h3>
+            <p>A text - based application written in C++ language that
+                assists in room booking and customer record
+                management. It requires secure login credentials to
+                access the data.
+                </p>
+        </div>
+        <div class="project">
+            <h3>MOVIE TICKETING SYSTEM</h3>
+            <p>This project is focused on customer ticket booking
+                services in theatre. This project shows how flexible C
+                language is. The online movie ticket booking system
+                allows users to browse and book movie tickets
+                conveniently through a web-based platform.
+                </p>
+        </div>
+        <div class="project">
+            <h3>STUDENT RECORD</h3>
+            <p>The student record management program written in C
+                language, stimulates student records for an institution. It
+                is highly useful tool for the institutions to maintain,
+                organize and retrieve specific details of a student
+                enrolled.
+                </p>
+        </div>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>You can contact me at <a href="mailto:sriya_palla@srmap.edu.in">sriya_palla@srmap.edu.in</a></p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2024 Sriya Palla Student Portfolio</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const links = document.querySelectorAll('nav a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        targetSection.classList.add('slide-in');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
